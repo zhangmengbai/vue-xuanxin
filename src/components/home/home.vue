@@ -1,36 +1,29 @@
 <template>
   <div class="home">
-    <!--<div onload="init()" onresize="metrics()">-->
-      <!--<canvas id="canvas"></canvas>-->
-    <!--</div>-->
     <div v-if="bLoad == true" class="preloader">
       <div class="status">
         <img src="~common/images/logo-big.png" alt="logo">
       </div>
     </div>
     <!--页头 -->
-    <div class="header">
-      <div class="for-sticky">
-        <!--LOGO-->
-        <div class="logo">
-          <a href="index.html"><img alt="logo" class="logo-nav" src="~common/images/logo.jpg"></a>
-        </div>
-        <!--/.LOGO END-->
-      </div>
-      <!--<button class="menu-button" id="open-button">-->
-        <!--<span></span>-->
-        <!--<span></span>-->
-        <!--<span></span>-->
-      <!--</button>-->
-      <!--/.for-sticky-->
-    </div>
+    <!--<div class="header">-->
+      <!--<div class="for-sticky">-->
+        <!--&lt;!&ndash;LOGO&ndash;&gt;-->
+        <!--<div class="logo">-->
+          <!--<a href="index.html"><img alt="logo" class="logo-nav" src="~common/images/logo.jpg"></a>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;/.LOGO END&ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash;<button class="menu-button" id="open-button">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+      <!--&lt;!&ndash;</button>&ndash;&gt;-->
+      <!--&lt;!&ndash;/.for-sticky&ndash;&gt;-->
+    <!--</div>-->
     <!--页头 END-->
-    <div class="content-wrap">
       <div class="content">
         <section id="home">
-          <div class="container">
-            <div class="row">
-              <div class="wrap-hero-content">
                 <div class="hero-content">
                   <h1>Hello</h1>
                   <br>
@@ -38,31 +31,29 @@
                     <span class="typing"></span>
                   </vue-typed-js>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
+        <div></div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
   import {VueTypedJs} from "vue-typed-js";
-  // import AUDIO from "common/js/AUDIO"
-  // import INTERACTION from "common/js/INTERACTION"
-  // import MAIN from "common/js/MAIN"
-  // import METRICS from "common/js/METRICS"
-  // import ORGANISM1 from "common/js/ORGANISM1"
-  // import ORGANISM2 from "common/js/ORGANISM2"
-  // import SPORES from "common/js/SPORES"
-  // import UTILS from "common/js/UTILS"
-  // import VISUAL from "common/js/VISUAL"
-  // import perlinSimplex from "common/js/lib/perlin-simplex"
-  // import promise from "common/js/lib/promise.min"
-  // import StartAudioContext from "common/js/lib/StartAudioContext"
-  // import Tone from "common/js/lib/Tone.min"
-  // import tune from "common/js/lib/tune"
+  // import "common/js/lib/promise.min"
+  // import "common/js/lib/Tone.min"
+  // import "common/js/lib/tombola.js"
+  // import "common/js/lib/perlin-simplex"
+  // import "common/js/lib/tune.js"
+  // import "common/js/UTILS.js"
+  // import "common/js/MAIN.js"
+  // import "common/js/METRICS.js"
+  // import "common/js/AUDIO.js"
+  // import "common/js/INTERACTION.js"
+  // import "common/js/VISUAL.js"
+  // import "common/js/SPORES.js"
+  // import "common/js/ORGANISM1.js"
+  // import "common/js/ORGANISM2.js"
+
 
   export default {
     data() {
@@ -74,7 +65,7 @@
     mounted() {
       // 不用 => 解绑当前this会使改变的bLoad无法被vue实例获取
       var setInt = setInterval(() => {
-        this.bLoad = false
+        this.bLoad = false;
         clearInterval(setInt)
       }, 500)
     },
@@ -144,13 +135,10 @@
       span:nth-child(3)
         top: 18px
 
-  .content-wrap
-    height: 100%
+  .content
+    position: absolute
     width: 100%
-    .content
-      position: absolute
-      width: 100%
-      height: 100%
+    height: 100%
 
   .preloader
     position: fixed
@@ -181,8 +169,6 @@
     /*background: url("~common/images/hero1.jpg")*/
     background-size: cover
     min-width: 100%
-    height: 100%
-    height: 100%
     width: 100%
     h1
       line-height :40px
