@@ -1,19 +1,21 @@
 
 
 //-------------------------------------------------------------------------------------------
-//  TOMBOLA SETUP
+//  TOMBOLA 设置
 //-------------------------------------------------------------------------------------------
 
-function Tombola() {
+
+export function Tombola() {
+
 }
-var tombola = new Tombola();
+export var tombola = new Tombola();
 
 
 //-------------------------------------------------------------------------------------------
-//  RANGE ROLL
+//  RANGE ROLL 随机数
 //-------------------------------------------------------------------------------------------
 
-// Returns a random whole number between 'min' and 'max' //
+// 返回'min'和'max'之间的随机整数 //
 
 Tombola.prototype.range = function(min,max) {
     return Math.round(min + (Math.random() * (max - min))); // int
@@ -25,7 +27,7 @@ Tombola.prototype.rangeFloat = function(min,max) {
     return min + (Math.random() * (max - min)); // float
 };
 
-// Returns an array populated with random whole numbers between 'min' and 'max' //
+// Returns an array populated with random whole numbers between 'min' and 'max' 返回一个填充了'min'和'max'之间随机整数的数组 //
 
 Tombola.prototype.rangeArray = function(min,max,length) {
     var a = [];
@@ -47,10 +49,10 @@ Tombola.prototype.rangeFloatArray = function(min,max,length) {
 
 
 //-------------------------------------------------------------------------------------------
-//  DICE ROLL
+//  DICE ROLL 掷骰子
 //-------------------------------------------------------------------------------------------
 
-// Returns a random whole number from simulated dice rolls //
+// Returns a random whole number from simulated dice rolls // 从模拟骰子卷返回一个随机整数
 
 Tombola.prototype.dice = function(die,sides) {
     die = Math.round(die);

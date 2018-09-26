@@ -23,6 +23,7 @@ function setupInteraction() {
 function mousePress() {
     mouseIsDown = true;
     rolloverCheck();
+    resetPaint();
 }
 
 

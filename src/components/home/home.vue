@@ -1,58 +1,47 @@
 <template>
-  <div class="welcome">
+  <div class="home">
     <div v-if="bLoad === true" class="preloader">
       <div class="status">
         <img src="~common/images/logo-big.png" alt="logo">
       </div>
     </div>
+
     <!--页头 -->
     <!--<div class="header">-->
-      <!--<div class="for-sticky">-->
-        <!--&lt;!&ndash;LOGO&ndash;&gt;-->
-        <!--<div class="logo">-->
-          <!--<a href="index.html"><img alt="logo" class="logo-nav" src="~common/images/logo.jpg"></a>-->
-        <!--</div>-->
-        <!--&lt;!&ndash;/.LOGO END&ndash;&gt;-->
-      <!--</div>-->
-      <!--&lt;!&ndash;<button class="menu-button" id="open-button">&ndash;&gt;-->
-        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
-        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
-        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
-      <!--&lt;!&ndash;</button>&ndash;&gt;-->
-      <!--&lt;!&ndash;/.for-sticky&ndash;&gt;-->
+    <!--<div class="for-sticky">-->
+    <!--&lt;!&ndash;LOGO&ndash;&gt;-->
+    <!--<div class="logo">-->
+    <!--<a href="index.html"><img alt="logo" class="logo-nav" src="~common/images/logo.jpg"></a>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;/.LOGO END&ndash;&gt;-->
+    <!--</div>-->
+    <!--&lt;!&ndash;<button class="menu-button" id="open-button">&ndash;&gt;-->
+    <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+    <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;/.for-sticky&ndash;&gt;-->
     <!--</div>-->
     <!--页头 END-->
-      <div class="content">
-        <section id="welcome">
-                <div class="hero-content">
-                  <h1>Hello</h1>
-                  <br>
-                  <vue-typed-js class="typed" :strings="['欢迎来到我的个人网站 ^1000', '目前暂时只有这个页面，将就看看呗╮(╯▽╰)╭ ^1000']" :typeSpeed="100" :loop="true" :backSpeed="70">
-                    <span class="typing"></span>
-                  </vue-typed-js>
-                </div>
-        </section>
-        <div></div>
-      </div>
+    <div class="content">
+      <section id="home">
+        <div class="hero-content">
+          <h1>Hello</h1>
+          <br>
+          <vue-typed-js class="typed" :strings="['欢迎来到我的个人网站 ^1000', '目前暂时只有这个页面，将就看看呗╮(╯▽╰)╭ ^1000']" :typeSpeed="100"
+                        :loop="true" :backSpeed="70">
+            <span class="typing"></span>
+          </vue-typed-js>
+          <button @click="toMusic">To Music</button>
+        </div>
+      </section>
+      <div></div>
+    </div>
   </div>
 </template>
 
 <script>
   import {VueTypedJs} from "vue-typed-js";
-  // import "common/js/lib/promise.min"
-  // import "common/js/lib/Tone.min"
-  // import "common/js/lib/tombola.js"
-  // import "common/js/lib/perlin-simplex"
-  // import "common/js/lib/tune.js"
-  // import "common/js/UTILS.js"
-  // import "common/js/MAIN.js"
-  // import "common/js/METRICS.js"
-  // import "common/js/AUDIO.js"
-  // import "common/js/INTERACTION.js"
-  // import "common/js/VISUAL.js"
-  // import "common/js/SPORES.js"
-  // import "common/js/ORGANISM1.js"
-  // import "common/js/ORGANISM2.js"
 
 
   export default {
@@ -60,6 +49,11 @@
       return {
         bLoad: true,
         d1: "asdas"
+      }
+    },
+    methods: {
+      toMusic: function () {
+        this.$router.replace({name: 'Music'})
       }
     },
     mounted() {
@@ -155,7 +149,7 @@
     position: absolute
     left: 50%
     top: 50%
-    background-image: url('loader.gif')
+    background-image: url('~common/images/loader.gif')
     background-repeat: no-repeat
     background-position: center center
     text-align: center
@@ -164,18 +158,18 @@
       text-align: center
       margin-top: -80px
 
-  #welcome
+  #home
     display: block
     /*background: url("~common/images/hero1.jpg")*/
     background-size: cover
     min-width: 100%
     width: 100%
     h1
-      line-height :40px
+      line-height: 40px
       letter-spacing: 0.6px
-      font-size:36px
-      margin-bottom:10px
-      font-weight:bold
+      font-size: 36px
+      margin-bottom: 10px
+      font-weight: bold
     .typed
       display block
       font-weight: 400
