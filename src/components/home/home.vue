@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <div v-if="bLoad == true" class="preloader">
+  <div class="welcome">
+    <div v-if="bLoad === true" class="preloader">
       <div class="status">
         <img src="~common/images/logo-big.png" alt="logo">
       </div>
@@ -23,7 +23,7 @@
     <!--</div>-->
     <!--页头 END-->
       <div class="content">
-        <section id="home">
+        <section id="welcome">
                 <div class="hero-content">
                   <h1>Hello</h1>
                   <br>
@@ -91,7 +91,7 @@
       left: 0
       border-bottom: 1px solid #f1f1f1
       display: block
-      padding: 0px 15px 5px 15px
+      padding: 0 15px 5px 15px
       background: #ffffff
       transition: all 0.3s
       .logo
@@ -129,7 +129,7 @@
         opacity: 1
         left: 0
       span:nth-child(1)
-        top: 0px
+        top: 0
       span:nth-child(2)
         top: 9px
       span:nth-child(3)
@@ -164,7 +164,7 @@
       text-align: center
       margin-top: -80px
 
-  #home
+  #welcome
     display: block
     /*background: url("~common/images/hero1.jpg")*/
     background-size: cover
