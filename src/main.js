@@ -4,7 +4,10 @@ import router from './router'
 // import { VueTypedJs } from 'vue-typed-js'
 
 import 'common/stylus/icon.styl'
-Vue.config.productionTip = false
+import  BaseDialog from 'components/base/BaseDialog'
+
+Vue.component('base-dialog', BaseDialog);
+Vue.config.productionTip = false;
 // Vue.use(VueTypedJs)
 /* eslint-disable no-new */
 new Vue({
